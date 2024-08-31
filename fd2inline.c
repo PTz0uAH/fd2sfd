@@ -2133,7 +2133,7 @@ main(int argc, char** argv)
       goto quit;
    }
 
-   bcopy(arrdefs,defs,fds*sizeof(fdDef*));
+   memmove(defs,arrdefs,fds*sizeof(fdDef*));
    
    qsort(arrdefs, count, sizeof arrdefs[0], fD_cmpName);
 
